@@ -37,9 +37,57 @@ class _PlayPageState extends State<PlayPage> {
                       child: NeuBox(child: Icon(Icons.menu_rounded)),
                     ),
                   ],
-                )
+                ),
+
+                const SizedBox(height: 25),
 
                 //cover art, artist and song name
+                NeuBox(
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset('lib/images/album.jpg')),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  //to put space between the texts
+                                  height: 6,
+                                ),
+                                const Text(
+                                  'The Feels',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22,
+                                  ),
+                                ),
+                                Text(
+                                  'melvitto',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                    color: Colors.grey.shade700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Icon(
+                              Icons.favorite_rounded,
+                              color: Colors.red,
+                              size: 32,
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
 
                 //start time, shuffle, repeat , end time
 

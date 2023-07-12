@@ -15,8 +15,8 @@ class _PlayPageState extends State<PlayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[300],
-        //backgroundColor: Colors.grey[800],
+        //backgroundColor: Colors.grey[300],
+        backgroundColor: Color.fromARGB(255, 48, 60, 48), //dark mode
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -30,14 +30,24 @@ class _PlayPageState extends State<PlayPage> {
                     SizedBox(
                       height: 60,
                       width: 60,
-                      child:
-                          NeuBox(child: Icon(Icons.arrow_back_ios_new_rounded)),
+                      child: NeuBox(
+                          child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.grey[300],
+                      )),
                     ),
-                    Text('S P O T I F Y'),
+                    Text('S P O T I F Y',
+                        style: TextStyle(
+                          color: Colors.grey[300],
+                        )),
                     SizedBox(
                       height: 60,
                       width: 60,
-                      child: NeuBox(child: Icon(Icons.menu_rounded)),
+                      child: NeuBox(
+                          child: Icon(
+                        Icons.menu_rounded,
+                        color: Colors.grey[300],
+                      )),
                     ),
                   ],
                 ),
@@ -63,9 +73,10 @@ class _PlayPageState extends State<PlayPage> {
                                   //to put space between the texts
                                   height: 6,
                                 ),
-                                const Text(
+                                Text(
                                   'The Feels',
                                   style: TextStyle(
+                                    color: Colors.grey[300],
                                     fontWeight: FontWeight.bold,
                                     fontSize: 22,
                                   ),
@@ -75,7 +86,8 @@ class _PlayPageState extends State<PlayPage> {
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
-                                    color: Colors.grey.shade700,
+                                    //color: Colors.grey.shade700,
+                                    color: Colors.grey.shade500, //dark mode
                                   ),
                                 ),
                               ],
@@ -96,11 +108,17 @@ class _PlayPageState extends State<PlayPage> {
                 const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Text('0:00'),
-                    Icon(Icons.shuffle_rounded),
-                    Icon(Icons.repeat_rounded),
-                    Text('3:39')
+                  children: [
+                    Text('0:00', style: TextStyle(color: Colors.grey[300])),
+                    Icon(
+                      Icons.shuffle_rounded,
+                      color: Colors.grey[300],
+                    ),
+                    Icon(Icons.repeat_rounded, color: Colors.grey[300]),
+                    Text('3:39',
+                        style: TextStyle(
+                          color: Colors.grey[300],
+                        ))
                   ],
                 ),
 
@@ -124,27 +142,21 @@ class _PlayPageState extends State<PlayPage> {
                     children: [
                       Expanded(
                           child: NeuBox(
-                              child: Icon(
-                        Icons.skip_previous_rounded,
-                        size: 36,
-                      ))),
+                              child: Icon(Icons.skip_previous_rounded,
+                                  size: 36, color: Colors.grey[300]))),
                       Expanded(
                           flex: 2,
                           child: Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
                             child: NeuBox(
-                                child: Icon(
-                              Icons.play_arrow_rounded,
-                              size: 36,
-                            )),
+                                child: Icon(Icons.play_arrow_rounded,
+                                    size: 36, color: Colors.grey[300])),
                           )),
                       Expanded(
                           child: NeuBox(
-                              child: Icon(
-                        Icons.skip_next_rounded,
-                        size: 36,
-                      ))),
+                              child: Icon(Icons.skip_next_rounded,
+                                  size: 36, color: Colors.grey[300]))),
                     ],
                   ),
                 ),

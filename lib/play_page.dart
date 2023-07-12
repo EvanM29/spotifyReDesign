@@ -60,7 +60,7 @@ class _PlayPageState extends State<PlayPage> {
                     children: [
                       ClipRRect(
                           borderRadius: BorderRadius.circular(8),
-                          child: Image.asset('lib/images/album.jpg')),
+                          child: Image.asset('lib/images/dark3.jpg')),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -74,7 +74,7 @@ class _PlayPageState extends State<PlayPage> {
                                   height: 6,
                                 ),
                                 Text(
-                                  'The Feels',
+                                  'In Fact ( feat. Gabzy)',
                                   style: TextStyle(
                                     color: Colors.grey[300],
                                     fontWeight: FontWeight.bold,
@@ -82,7 +82,7 @@ class _PlayPageState extends State<PlayPage> {
                                   ),
                                 ),
                                 Text(
-                                  'melvitto',
+                                  'melvitto, Gabzy',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
